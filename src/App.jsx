@@ -6,7 +6,7 @@ export default function App() {
 
   console.log(name, email)
   return (
-      <form name="contact"  method="POST">
+      <form name="contact" method="POST" netlify>
         <div>
           <label htmlFor="name">Your Name:</label>
           <input type="text" name="name" id="name" value={name} onChange={(ev) => setName(ev.target.value)}/>
