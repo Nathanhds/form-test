@@ -1,6 +1,6 @@
 export default function App() {
   return (
-      <form name="contact" method="POST" netlify>
+      <form name="contact" action="/sent.html" netlify>
         <p>
           <label>Your Name: <input type="text" name="name" /></label>
         </p>
