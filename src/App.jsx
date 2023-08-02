@@ -6,20 +6,14 @@ export default function App() {
 
   console.log(name, email)
   return (
-    <form name="contact" method="post">
-    <p>
-      <label>Your Name: <input type="text" name="name"/></label>
-    </p>
-    <p>
-      <label>Your Email: <input type="email" name="email"/></label>
-    </p>
-    <p>
-      <label>Message: <textarea name="message"></textarea></label>
-    </p>
-    <p>
+    <form name="contact" method="post" action="/contact">
+      <input type="hidden" name="form-name" value="contact"/>
+      <label>Your Name:</label>
+      <input required type="text" name="name"/>
+      <label>Your Email:</label>
+      <input required type="email" name="email"/>
       <button type="submit">Send</button>
-    </p>
-  </form>
+    </form>
 
   )
 }
