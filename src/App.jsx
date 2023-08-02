@@ -6,17 +6,20 @@ export default function App() {
 
   console.log(name, email)
   return (
-      <form name="contact" method="POST" netlify>
-        <div>
-          <label htmlFor="name">Your Name:</label>
-          <input type="text" name="name" id="name" value={name} onChange={(ev) => setName(ev.target.value)}/>
-        </div>
-        <div>
-          <label htmlFor="name">Your Email:</label>
-            <input type="text" name="email" id="email" value={email} onChange={(ev) => setEmail(ev.target.value)}/>
-        </div>
-          <button type="submit">Send</button>
-      </form>
+    <form name="contact" method="post">
+    <p>
+      <label>Your Name: <input type="text" name="name"/></label>
+    </p>
+    <p>
+      <label>Your Email: <input type="email" name="email"/></label>
+    </p>
+    <p>
+      <label>Message: <textarea name="message"></textarea></label>
+    </p>
+    <p>
+      <button type="submit">Send</button>
+    </p>
+  </form>
 
   )
 }
