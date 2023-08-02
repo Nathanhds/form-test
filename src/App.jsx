@@ -1,15 +1,21 @@
-export default function App() {
+import { useState } from "react"
+
+export default function App() {  
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+
+  console.log(name, email)
   return (
-      <form name="contact" action="/sent.html" netlify>
-        <p>
-          <label>Your Name: <input type="text" name="name" /></label>
-        </p>
-        <p>
-          <label>Your Email: <input type="email" name="email" /></label>
-        </p>
-        <p>
+      <form name="contact"  method="POST">
+        <div>
+          <label htmlFor="name">Your Name:</label>
+          <input type="text" name="name" id="name" value={name} onChange={(ev) => setName(ev.target.value)}/>
+        </div>
+        <div>
+          <label htmlFor="name">Your Email:</label>
+            <input type="text" name="email" id="email" value={email} onChange={(ev) => setEmail(ev.target.value)}/>
+        </div>
           <button type="submit">Send</button>
-        </p>
       </form>
 
   )
